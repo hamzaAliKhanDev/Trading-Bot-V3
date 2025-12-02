@@ -66,9 +66,14 @@ public class StartBot {
 									consoleLogger
 											.info("[BOT] No EntryPrice found. Placing orders for dead zone::::::::");
 									entryPriceStr[0] = "";
-
-									deadZoneOrder.applyDeadZoneOrder().subscribe();
-									deltaDto.setDeadZoneOrderPlaced(true);
+									if(!deltaDto.isDeadZoneOrderPlaced()) {
+										deadZoneOrder.applyDeadZoneOrder().subscribe();
+										deltaDto.setDeadZoneOrderPlaced(true);
+									}else {
+										consoleLogger
+										.info("[BOT] No EntryPrice found. Dead zone orders already placed::::::::");
+									}	
+									
 								} else {
 									deltaDto.setDeadZoneOrderPlaced(false);
 									final long[] entryPrice = { (long) Double.parseDouble(entryPriceStr[0]) };
