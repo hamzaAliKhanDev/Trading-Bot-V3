@@ -1,0 +1,3 @@
+[25 Nov 2025 21:04:39,887 INFO  Console -PositionService.java]- Response of PositionDetailsService:::::{"result":{"entry_price":null,"size":0},"success":true}
+[25 Nov 2025 21:04:39,967 INFO  Console -StartBot.java]- [BOT] Position data received for tick 11268: {"result":{"entry_price":null,"size":0},"success":true}
+[25 Nov 2025 21:04:39,967 INFO  Console -StartBot.java]- [BOT] No EntryPrice found. Going for next tick::::::::
